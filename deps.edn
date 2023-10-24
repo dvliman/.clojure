@@ -1,0 +1,11 @@
+{:aliases {:new {:extra-deps {seancorfield/clj-new {:mvn/version "0.8.6"}}
+                 :main-opts ["-m" "clj-new.create"]}
+           :dev {:extra-paths ["/Users/dliman/.clojure"]
+                 :extra-deps {mvxcvi/puget {:mvn/version "1.3.2"}
+                              hashp/hashp {:mvn/version "0.2.1"}}}
+           :fulcro-app {:extra-deps {com.github.seancorfield/clj-new {:mvn/version "1.2.381"}}
+                        :exec-fn clj-new/create
+                        :exec-args {:template "dv.fulcro-template" :args ["+test" "+server"]}}
+
+           :reveal {:extra-deps {vlaaad/reveal {:mvn/version "1.3.280"}}
+                    :jvm-opts ["-Dvlaaad.reveal.prefs={:theme,:light}"]}}}
