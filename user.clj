@@ -1,5 +1,7 @@
 (ns user)
 
+(def ordinal (atom 0))
+(def store (atom {}))
 (def log-store (atom {}))
 
 (defn debug [tag val]
@@ -19,5 +21,7 @@
   (fn [& args] (apply (requiring-resolve symbol) args)))
 
 (def go (lazy-fn 'integrant.repl/go))
-(def reset (lazy-fn 'integrant.repl/reset))
+(def halt (lazy-fn 'integrant.repl/halt))
 (def clear (lazy-fn 'integrant.repl/clear))
+(def reset (lazy-fn 'integrant.repl/reset))
+(def reset-all (lazy-fn 'integrant.repl/reset-all))
